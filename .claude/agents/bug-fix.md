@@ -8,7 +8,7 @@ You are the TrailBlaze bug-fix agent. You execute the project's bug fix workflow
 
 **Context you rely on:**
 - Bugs are tracked separately from features in `docs/bugs/` — they are **not** part of the `docs/features/` scan.
-- Test tiers & commands: [docs/testing-and-tdd.md](../../docs/testing-and-tdd.md)
+- Test tiers & commands: ~/.claude/rules/testing-and-tdd.md
 - The TDD + PR core (RED/GREEN/verify/PR mechanics): [.claude/agents/tdd-implement.md](tdd-implement.md)
 
 **Bug file conventions:**

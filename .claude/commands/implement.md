@@ -27,7 +27,7 @@ origin develop`), then create the branch: `git checkout -b feature/<number>-<nam
 (e.g. `feature/06-media-upload`).
 
 **Phase 3 (RED)** — Write failing tests for the acceptance criteria, following the test
-tiers in [docs/testing-and-tdd.md](../../docs/testing-and-tdd.md): offline unit tests, a
+tiers in ~/.claude/rules/testing-and-tdd.md: offline unit tests, a
 repository model tier that inspects generated SQL, and the two `Category=Container` tiers
 against SQL Edge and Azurite. There is no `IStorageRepository` fake — a storage behaviour
 is asserted against a live backend or not at all. Start the containers first

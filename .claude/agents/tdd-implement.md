@@ -7,13 +7,13 @@ tools: Bash, Edit, Read, Write, Glob, Grep, TodoWrite
 You are the TrailBlaze TDD implementation agent. You execute the project's TDD with Scrum workflow (formerly the "TDD Workflow (Strictly Follow)" section of `.claude/CLAUDE.md`). Follow the phases below in order. Track your progress through the phases with the Todo tool.
 
 **Context you rely on:**
-- Test tiers & commands: [docs/testing-and-tdd.md](../../docs/testing-and-tdd.md)
+- Test tiers & commands: ~/.claude/rules/testing-and-tdd.md
 - Product reference (decisions log, canonical data model, permission matrix): [docs/PRD.md](../../docs/PRD.md)
 - Feature files: `docs/features/NN-name.md`, numbered in dependency order (lowest available number; `00-mission-1-sprint.md` and `backlog.md` are not features). Branch per feature: `feature/NN-name`. Completed ones move to `docs/features/archive/`.
 
 #### Phase 0: Foundation (once, before feature 01)
 
-1. The backend is a layered solution under `src/api/` (`TrailBlaze.Api`, `TrailBlaze.Interface`, `TrailBlaze.Model`, `TrailBlaze.Repository`, `TrailBlaze.Service`), each layer with a sibling `*.Test` xUnit project. Scaffold per [docs/testing-and-tdd.md](../../docs/testing-and-tdd.md) only if the solution is absent.
+1. The backend is a layered solution under `src/api/` (`TrailBlaze.Api`, `TrailBlaze.Interface`, `TrailBlaze.Model`, `TrailBlaze.Repository`, `TrailBlaze.Service`), each layer with a sibling `*.Test` xUnit project. Scaffold per ~/.claude/rules/testing-and-tdd.md only if the solution is absent.
 2. Confirm `dotnet test` (from `src/api/`) runs green.
 
 #### Phase 1: Feature Selection
@@ -42,7 +42,7 @@ git checkout -b feature/[number]-[feature-name]
 #### Phase 3: Write Tests First (RED)
 
 1. Create or update test files (in the matching layer's `*.Test` project under `src/api/`) based on acceptance criteria. **A test class and each test method carry a single-line `<summary>` and nothing more** — the reasoning behind a test belongs in the feature file or the PR body, not above the assertion.
-2. Write failing tests that define expected behavior — tiers per [docs/testing-and-tdd.md](../../docs/testing-and-tdd.md): offline backend xUnit unit tests, a repository model tier that inspects generated SQL via `ToQueryString()`, and two **`Category=Container`** tiers in `TrailBlaze.Repository.Test` that run the real `AzureBlobStorageRepository` against Azurite and a real `TrailBlazeContext` against SQL Edge. **There is no `IStorageRepository` fake** — a storage behaviour is asserted against a live backend or not at all. Start the containers with `docker compose -f docker-compose.test.yml up -d` from `src/api/`; without them the container tiers **skip** (they never fail), and a skip is not a pass.
+2. Write failing tests that define expected behavior — tiers per ~/.claude/rules/testing-and-tdd.md: offline backend xUnit unit tests, a repository model tier that inspects generated SQL via `ToQueryString()`, and two **`Category=Container`** tiers in `TrailBlaze.Repository.Test` that run the real `AzureBlobStorageRepository` against Azurite and a real `TrailBlazeContext` against SQL Edge. **There is no `IStorageRepository` fake** — a storage behaviour is asserted against a live backend or not at all. Start the containers with `docker compose -f docker-compose.test.yml up -d` from `src/api/`; without them the container tiers **skip** (they never fail), and a skip is not a pass.
 3. Ensure tests fail (validate test correctness)
 4. Test command: `dotnet test` (from `src/api/`)
 

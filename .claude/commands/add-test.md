@@ -12,7 +12,7 @@ feature number (e.g. `06`) — resolve to `docs/features/<number>-<name>.md` and
    touches already cover.
 3. **Identify gaps** — acceptance-criteria behaviors not yet covered by a test.
 4. **Write NEW failing test(s)** for those gaps, following the test tiers in
-   [docs/testing-and-tdd.md](../../docs/testing-and-tdd.md). In outline: offline unit tests for
+   ~/.claude/rules/testing-and-tdd.md. In outline: offline unit tests for
    validation, policy construction and permission evaluation; a repository model tier that stays
    offline and inspects generated SQL via `ToQueryString()`; and two **`Category=Container`** tiers
    in `TrailBlaze.Repository.Test` that run the real `AzureBlobStorageRepository` against Azurite
