@@ -3,7 +3,7 @@ description: Archive a completed feature after its PR is merged to develop
 argument-hint: "[number]"
 ---
 
-You are executing the TrailBlaze `/archive` command (Phase 8 of the `tdd-implement` agent — [.claude/agents/tdd-implement.md](../agents/tdd-implement.md)).
+You are executing the TrailBlaze `/archive` command (Phase 8 of the `tdd-implement` agent — ~/.claude/agents/tdd-implement.md).
 `$ARGUMENTS` is the feature number (e.g. `06`) — resolve it to
 `docs/features/<number>-<name>.md`.
 

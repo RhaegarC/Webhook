@@ -4,7 +4,7 @@ argument-hint: "[number | feature-file | blank]"
 ---
 
 You are executing the TrailBlaze Scrum+TDD `/implement` command. Follow the TDD workflow encoded
-in the `tdd-implement` agent — [.claude/agents/tdd-implement.md](../agents/tdd-implement.md)
+in the `tdd-implement` agent — ~/.claude/agents/tdd-implement.md
 (Phases 1–5 below; Phase 0 of the agent is the one-time foundation). `$ARGUMENTS` is optional:
 a feature number (e.g. `06`), a feature file path (e.g. `docs/features/06-media-upload.md`),
 or blank.

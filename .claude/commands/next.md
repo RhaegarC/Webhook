@@ -3,7 +3,7 @@ description: Select the next feature and implement it (TDD)
 ---
 
 You are executing the TrailBlaze `/next` command. This is equivalent to `/implement` with no
-arguments, using Phase 1 selection from the `tdd-implement` agent — [.claude/agents/tdd-implement.md](../agents/tdd-implement.md).
+arguments, using Phase 1 selection from the `tdd-implement` agent — ~/.claude/agents/tdd-implement.md.
 
 1. **Select** — determine the next feature: the **lowest-numbered** file in `docs/features/`
    — excluding `00-mission-1-sprint.md`, `backlog.md`, and anything
