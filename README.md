@@ -30,7 +30,7 @@ This service exists so that it isn't.
 ## Status
 
 **Design phase — not yet implemented.** The requirements have been written and reviewed; the
-service itself has not been built. See [doc/PRD.md](doc/PRD.md) for the full specification.
+service itself has not been built. See [docs/PRD.md](docs/PRD.md) for the full specification.
 
 ## Scope
 
@@ -41,7 +41,8 @@ notifications, triggering other work — is deliberately left to a later phase.
 
 | Document | Contents |
 |---|---|
-| [doc/PRD.md](doc/PRD.md) | Full requirements specification |
+| [docs/PRD.md](docs/PRD.md) | Full requirements specification |
+| [docs/features/](docs/features/) | The work broken into six pieces, with acceptance criteria |
 
 ## License
 
